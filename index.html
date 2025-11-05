@@ -6,28 +6,28 @@
 <title>💖 Te amo, rabanita 💖</title>
 <style>
   body {
-    background: linear-gradient(135deg, #ffe6ec, #fff6f9);
+    background-color: #ffe6ec;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     height: 100vh;
-    font-family: 'Segoe UI', cursive;
     margin: 0;
-    overflow: hidden;
+    font-family: "Segoe UI", sans-serif;
+    color: #c2185b;
+    text-align: center;
   }
 
   h1 {
-    color: #c2185b;
     font-size: 2.8em;
-    text-align: center;
+    margin-bottom: 25px;
     animation: fadeIn 2s ease-in-out;
-    margin-bottom: 20px;
   }
 
-  svg {
-    width: 180px;
-    height: 180px;
+  /* Corazón SVG */
+  .heart {
+    width: 220px;
+    height: 220px;
     animation: beat 1.5s infinite;
   }
 
@@ -37,15 +37,14 @@
   }
 
   .note {
-    margin-top: 40px;
-    font-size: 1.4em;
+    margin-top: 30px;
+    font-size: 1.3em;
     color: #880e4f;
-    text-align: center;
     animation: fadeIn 3s ease-in-out;
   }
 
   @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(15px); }
+    from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
   }
 </style>
@@ -53,9 +52,11 @@
 <body>
   <h1>💖 Te amo, rabanita 💖</h1>
 
-  <!-- Corazón SVG real -->
-  <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-    <path d="M471.7 73.5c-54.5-46.4-136-38.7-186.4 13.8L256 116.9l-29.3-29.6C176.3 34.8 94.8 27.1 40.3 73.5c-62.2 53-66.1 149.8-9.2 207.6l193.5 198.1a31.9 31.9 0 0 0 46.8 0l193.5-198.1c56.8-57.8 53-154.6-9.2-207.6z" fill="#ff4d6d"/>
+  <!-- Corazón SVG perfectamente centrado -->
+  <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg">
+    <path d="M23.6,0c-2.9,0-5.4,1.6-7.6,4.1C13.8,1.6,11.3,0,8.4,0C3.8,0,0,3.8,0,8.4
+             c0,9.1,16,21.2,16,21.2s16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"
+          fill="#ff4d6d"/>
   </svg>
 
   <div class="note">Con todo mi amor 🥰</div>
