@@ -10,64 +10,54 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     flex-direction: column;
+    height: 100vh;
     font-family: 'Segoe UI', cursive;
+    margin: 0;
     overflow: hidden;
   }
+
   h1 {
     color: #c2185b;
-    font-size: 3em;
+    font-size: 2.8em;
     text-align: center;
     animation: fadeIn 2s ease-in-out;
+    margin-bottom: 20px;
   }
-  .heart {
-    position: relative;
-    width: 150px;
-    height: 135px;
-    margin-top: 20px;
-    transform: scale(1);
-    animation: pulse 1s infinite;
+
+  svg {
+    width: 180px;
+    height: 180px;
+    animation: beat 1.5s infinite;
   }
-  .heart::before,
-  .heart::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 150px;
-    height: 240px;
-    border-radius: 75px 75px 0 0;
-    background: #ff4d6d;
-  }
-  .heart::before {
-    left: 150px;
-    transform: rotate(-45deg);
-    transform-origin: 0 100%;
-  }
-  .heart::after {
-    left: 0;
-    transform: rotate(45deg);
-    transform-origin: 100% 100%;
-  }
-  @keyframes pulse {
+
+  @keyframes beat {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.1); }
   }
-  @keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
+
   .note {
-    margin-top: 25px;
-    font-size: 1.2em;
+    margin-top: 40px;
+    font-size: 1.4em;
     color: #880e4f;
+    text-align: center;
+    animation: fadeIn 3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 </style>
 </head>
 <body>
   <h1>💖 Te amo, rabanita 💖</h1>
-  <div class="heart"></div>
+
+  <!-- Corazón SVG real -->
+  <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+    <path d="M471.7 73.5c-54.5-46.4-136-38.7-186.4 13.8L256 116.9l-29.3-29.6C176.3 34.8 94.8 27.1 40.3 73.5c-62.2 53-66.1 149.8-9.2 207.6l193.5 198.1a31.9 31.9 0 0 0 46.8 0l193.5-198.1c56.8-57.8 53-154.6-9.2-207.6z" fill="#ff4d6d"/>
+  </svg>
+
   <div class="note">Con todo mi amor 🥰</div>
 </body>
 </html>
-
