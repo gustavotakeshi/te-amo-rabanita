@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>💖 Te amo, rabanita 💖</title>
+<style>
+  body {
+    background-color: #ffe6ec;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    color: #c2185b;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.8em;
+    margin-bottom: 25px;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  /* Corazón SVG */
+  .heart {
+    width: 220px;
+    height: 220px;
+    animation: beat 1.5s infinite;
+  }
+
+  @keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+
+  .note {
+    margin-top: 30px;
+    font-size: 1.3em;
+    color: #880e4f;
+    animation: fadeIn 3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+  <h1>💖 Te amo, rabanita 💖</h1>
+
+  <!-- Corazón SVG perfectamente centrado -->
+  <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg">
+    <path d="M23.6,0c-2.9,0-5.4,1.6-7.6,4.1C13.8,1.6,11.3,0,8.4,0C3.8,0,0,3.8,0,8.4
+             c0,9.1,16,21.2,16,21.2s16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"
+          fill="#ff4d6d"/>
+  </svg>
+
+  <div class="note">Con todo mi amor 🥰</div>
+</body>
+</html>
